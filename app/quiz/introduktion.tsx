@@ -1,36 +1,68 @@
-import React from 'react';
-import { View, Text, StyleSheet, Button } from 'react-native';
-import { useLocalSearchParams, useRouter } from 'expo-router'; // Use useLocalSearchParams for route-specific params
-import QuizComponent from '@/components/QuizComponent'; // Assuming you have a QuizComponent
+import React, { useState } from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+import { useLocalSearchParams, useRouter } from 'expo-router';
+import QuizComponent from '@/components/QuizComponent';
+import { Button } from 'react-native-paper';
 
-const QuizScreen = () => {
-  const { topic } = useLocalSearchParams(); // Get the dynamic topic from the current route
-  const router = useRouter(); // Allows for programmatic navigation
+const IntroductionQuiz = () => {
+  const { topic } = useLocalSearchParams<{ topic: string }>();
+  const router = useRouter();
+  const [isQuizFinished, setIsQuizFinished] = useState<boolean>(false);
+  const [finalScore, setFinalScore] = useState<number>(0);
 
-  // Mock quiz data for now - customize this for each topic
+  // Mock quiz data - customize this for each topic
   const quizData = {
     topic,
     questions: [
       {
         question: `What is a key concept in ${topic}?`,
-        options: ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4'],
-        answer: 'Answer 1',
+        options: ['Encapsulation', 'Polymorphism', 'Inheritance', 'All of the above'],
+        answer: 'All of the above',
       },
       {
-        question: `Another question about ${topic}?`,
-        options: ['Option 1', 'Option 2', 'Option 3', 'Option 4'],
-        answer: 'Option 2',
+        question: `Which keyword is used to define a class in ${topic}?`,
+        options: ['function', 'class', 'def', 'module'],
+        answer: 'class',
       },
+      // Add more questions as needed
     ],
+  };
+
+  const handleQuizEnd = (score: number) => {
+    setFinalScore(score);
+    setIsQuizFinished(true);
   };
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Quiz for {topic}</Text>
-      {/* Render the QuizComponent here */}
-      <QuizComponent data={quizData} />
-      {/* Button to go back to the previous screen */}
-      <Button title="Go Back" onPress={() => router.back()} />
+      {!isQuizFinished ? (
+        <>
+          <Text style={styles.title}>Quiz: {topic}</Text>
+          <QuizComponent data={quizData} onQuizEnd={handleQuizEnd} />
+        </>
+      ) : (
+        <View style={styles.resultContainer}>
+          <Text style={styles.resultText}>Your Score: {finalScore}/{quizData.questions.length}</Text>
+          <Button
+            mode="contained"
+            onPress={() => {
+              router.replace('/moduler/App. udvikling'); // Navigate back to home
+            }}
+            style={styles.homeButton}
+          >
+            Go back
+          </Button>
+          <Button
+            mode="contained"
+            onPress={() => {
+              router.replace('/quiz/introduktion'); // Navigate back to home
+            }}
+            style={styles.homeButton}
+          >
+            Try again
+          </Button>
+        </View>
+      )}
     </View>
   );
 };
@@ -39,13 +71,28 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
+    backgroundColor: '#fafafa',
+  },
+  title: {
+    fontSize: 28,
+    marginBottom: 20,
+    textAlign: 'center',
+    fontWeight: 'bold',
+  },
+  resultContainer: {
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
-  title: {
-    fontSize: 24,
-    marginBottom: 20,
+  resultText: {
+    fontSize: 26,
+    marginBottom: 30,
+    fontWeight: 'bold',
   },
+  homeButton: {
+    paddingHorizontal: 20,
+    marginTop: 10,
+    },
 });
 
-export default QuizScreen;
+export default IntroductionQuiz;
