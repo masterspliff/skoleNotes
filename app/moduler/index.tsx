@@ -4,17 +4,16 @@ import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-import { Link, useRouter } from 'expo-router';
-import { Collapsible } from '@/components/Collapsible';
-import { ExternalLink } from '@/components/ExternalLink';
+import { useRouter } from 'expo-router';
+
 
 
 export default function ModulerPage() {
   const router = useRouter();
 
   const modules = [
-    { title: 'App. udvikling', path: './moduler/App. udvikling' },
-    // Add more lessons here
+    { title: 'App. udvikling', path: '/' },
+    { title: 'Database Design', path: '/' },
   ];
 
   return(
@@ -77,6 +76,7 @@ const styles = StyleSheet.create({
     },
     lessonsContainer: {
       marginVertical: 20,
+    
     },
     lessonItem: {
       marginBottom: 16,

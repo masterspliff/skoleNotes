@@ -72,7 +72,8 @@ const QuizComponent: React.FC<QuizComponentProps> = ({ data, onQuizEnd }) => {
 
   return (
     <View style={styles.container}>
-      {/* Conditionally render ProgressBar for iOS or Android */}
+
+      {/* Conditionally render ProgressBar for iOS or Android - dosent work for pc, whyyy?*/}
       {isIOSorAndroid && (
         <ProgressBar progress={progress} color="#6200ee" style={styles.progressBar} />
       )}

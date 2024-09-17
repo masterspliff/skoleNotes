@@ -15,7 +15,7 @@ export default function AppUdviklingScreen() {
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
       headerImage={<AntDesign size={310} name="database" style={styles.headerImage} />}>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">App udvikling</ThemedText>
+        <ThemedText type="title">Database Design</ThemedText>
       </ThemedView>
       <ThemedText>Her kan du finde de forskellige emner</ThemedText>
 
