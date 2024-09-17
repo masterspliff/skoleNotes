@@ -40,6 +40,7 @@ export default function TabLayout() {
           ),
         }}
       />
+
       <Tabs.Screen
         name="Database Design"
         options={{
@@ -53,6 +54,7 @@ export default function TabLayout() {
           ),
         }}
       />
+ 
     </Tabs>
   );
 }

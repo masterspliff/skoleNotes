@@ -1,0 +1,38 @@
+[
+    {
+      "topic": "Introduktion",
+      "questions": [
+        {
+          "question": "What is React Native?",
+          "options": ["A library", "A framework", "A language", "An IDE"],
+          "answer": "A framework",
+          "explanation": "React Native is a framework for building native apps using React.",
+          "image": "https://example.com/image1.png"
+        },
+        {
+          "question": "Which keyword is used to define a class in JavaScript?",
+          "options": ["function", "class", "def", "module"],
+          "answer": "class",
+          "explanation": "The 'class' keyword is used to define classes in JavaScript."
+        }
+      ]
+    },
+    {
+      "topic": "Advanced Concepts",
+      "questions": [
+        {
+          "question": "What is the use of the useEffect hook?",
+          "options": ["To manage state", "To perform side effects", "To handle events", "None of the above"],
+          "answer": "To perform side effects",
+          "explanation": "The useEffect hook lets you perform side effects in function components."
+        },
+        {
+          "question": "What does 'lifting state up' mean in React?",
+          "options": ["Moving state to a higher component", "Using state in the same component", "Passing state down as props", "None of the above"],
+          "answer": "Moving state to a higher component",
+          "explanation": "Lifting state up involves moving state to a common ancestor component."
+        }
+      ]
+    }
+  ]
+  

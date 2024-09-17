@@ -1,44 +1,38 @@
+// Import necessary modules
 import { Ionicons } from '@expo/vector-icons';
-import { StyleSheet, Button } from 'react-native';
+import { StyleSheet, Button, ScrollView, TouchableOpacity, Text } from 'react-native';
 import { Collapsible } from '@/components/Collapsible';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { Link } from 'expo-router'; // Import Link for navigation
+import { Link, useRouter } from 'expo-router';
+
+import Introduktion from './lektioner/app-udvikling/Introduktion'; // Adjust this path based on the actual location of Introduktion.tsx
 
 export default function AppUdviklingScreen() {
+
+
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
-      headerImage={<Ionicons size={310} name="code-slash" style={styles.headerImage} />}>
-      
+      headerImage={<Ionicons size={310} name="code-slash" style={styles.headerImage} />}
+    >
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">App Udvikling</ThemedText>
       </ThemedView>
-      
-      <ThemedText>Her kan du finde de forskellige emner</ThemedText>
+
+      <ThemedText>Emner</ThemedText>
 
       <Collapsible title="Introduktion">
-        {/* Link to the quiz screen with the topic as a URL parameter */}
-        <Link href="/quiz/introduktion">
+        <Introduktion />
+        <Link
+          href={{
+            pathname: '/screens/QuizScreen',
+            params: { topic: 'Introduktion' },
+          }}
+        >
           <Button title="Take Quiz" />
         </Link>
-      </Collapsible>
-
-      <Collapsible title="Kontrolstrukturer">
-        
-      </Collapsible>
-
-      <Collapsible title="Arrays og Metoder">
-        
-      </Collapsible>
-
-      <Collapsible title="Intro til OOP 1">
-        
-      </Collapsible>
-
-      <Collapsible title="Intro til OOP 2">
-        
       </Collapsible>
     </ParallaxScrollView>
   );
@@ -54,5 +48,18 @@ const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: 'row',
     gap: 8,
+  },
+  lessonsContainer: {
+    marginVertical: 20,
+  },
+  lessonItem: {
+    marginBottom: 16,
+    padding: 12,
+    backgroundColor: '#f0f0f0',
+    borderRadius: 8,
+  },
+  lessonText: {
+    fontSize: 18,
+    fontWeight: '500',
   },
 });
