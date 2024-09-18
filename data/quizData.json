@@ -1,38 +1,138 @@
 [
-    {
-      "topic": "Introduktion",
-      "questions": [
-        {
-          "question": "What is React Native?",
-          "options": ["A library", "A framework", "A language", "An IDE"],
-          "answer": "A framework",
-          "explanation": "React Native is a framework for building native apps using React.",
-          "image": "https://example.com/image1.png"
-        },
-        {
-          "question": "Which keyword is used to define a class in JavaScript?",
-          "options": ["function", "class", "def", "module"],
-          "answer": "class",
-          "explanation": "The 'class' keyword is used to define classes in JavaScript."
-        }
-      ]
-    },
-    {
-      "topic": "Advanced Concepts",
-      "questions": [
-        {
-          "question": "What is the use of the useEffect hook?",
-          "options": ["To manage state", "To perform side effects", "To handle events", "None of the above"],
-          "answer": "To perform side effects",
-          "explanation": "The useEffect hook lets you perform side effects in function components."
-        },
-        {
-          "question": "What does 'lifting state up' mean in React?",
-          "options": ["Moving state to a higher component", "Using state in the same component", "Passing state down as props", "None of the above"],
-          "answer": "Moving state to a higher component",
-          "explanation": "Lifting state up involves moving state to a common ancestor component."
-        }
-      ]
-    }
-  ]
-  
+  {
+    "topic": "Introduktion",
+    "questions": [
+      {
+        "question": "Hvilket filformat gemmes C# kildekode normalt i?",
+        "options": [".cs", ".cpp", ".java", ".py"],
+        "answer": ".cs",
+        "explanation": "C# filer gemmes med filtypenavnet .cs, som står for C# source.",
+        "image": ""
+      },
+      {
+        "question": "Hvad er C#?",
+        "options": ["Et programmeringssprog", "Et operativsystem", "En IDE", "En database"],
+        "answer": "Et programmeringssprog",
+        "explanation": "C# er et programmeringssprog udviklet af Microsoft som en del af .NET-platformen."
+      },
+      {
+        "question": "Hvilken tast bruges til at skrive en tuborgklamme i C# på et dansk tastatur?",
+        "options": ["AltGr + 7 og AltGr + 0", "Ctrl + 7", "Shift + 7", "Alt + 7"],
+        "answer": "AltGr + 7 og AltGr + 0",
+        "explanation": "Tuborgklammerne '{' og '}' bruges til at markere kodeblokke i C#, og de kan skrives med AltGr + 7 og AltGr + 0 på et dansk tastatur."
+      },
+      {
+        "question": "Hvordan afslutter man en instruktion i C#?",
+        "options": ["Med et semikolon (;)", "Med et kolon (:)", "Med et punktum (.)", "Med en stjerne (*)"],
+        "answer": "Med et semikolon (;)",
+        "explanation": "I C# afsluttes hver instruktion med et semikolon (;), som signalerer slutningen af en sætning."
+      },
+      {
+        "question": "Hvad er forskellen mellem store og små bogstaver i C#?",
+        "options": ["Ingen forskel", "Kun på klasseniveau", "Der er forskel, da C# er casesensitiv", "Kun på variabelniveau"],
+        "answer": "Der er forskel, da C# er casesensitiv",
+        "explanation": "C# er casesensitiv, hvilket betyder, at store og små bogstaver gør en forskel."
+      },
+      {
+        "question": "Hvad betyder 'namespace' i C#?",
+        "options": ["En metode til at organisere typer", "En variabeltype", "Et nøgleord for at definere loops", "En datatypedefinition"],
+        "answer": "En metode til at organisere typer",
+        "explanation": "Et namespace i C# bruges til at organisere typer, som klasser og strukturer, og forhindrer navnekonflikter."
+      },
+      {
+        "question": "Hvilket nøgleord bruges til at oprette en ny instans af en klasse i C#?",
+        "options": ["new", "create", "init", "make"],
+        "answer": "new",
+        "explanation": "Nøgleordet 'new' bruges til at oprette en ny instans (objekt) af en klasse i C#."
+      },
+      {
+        "question": "Hvad repræsenterer en 'int' type i C#?",
+        "options": ["Et heltal", "Et flydende tal", "En tekst", "En boolean værdi"],
+        "answer": "Et heltal",
+        "explanation": "Datatypen 'int' bruges til at repræsentere heltal (integer) i C#."
+      },
+      {
+        "question": "Hvilket nøgleord bruges til at definere en metode i C#?",
+        "options": ["void", "method", "func", "def"],
+        "answer": "void",
+        "explanation": "Metoder i C# kan defineres med nøgleordet 'void', som angiver, at metoden ikke returnerer nogen værdi."
+      },
+      {
+        "question": "Hvad bruges Console.WriteLine() metoden til?",
+        "options": ["At udskrive tekst til konsollen", "At oprette en variabel", "At stoppe programmet", "At initialisere en klasse"],
+        "answer": "At udskrive tekst til konsollen",
+        "explanation": "Console.WriteLine() bruges til at udskrive en streng eller variabel til konsolvinduet."
+      },
+      {
+        "question": "Hvilken datatype bruges til at gemme tekst i C#?",
+        "options": ["string", "char", "text", "txt"],
+        "answer": "string",
+        "explanation": "'string' er datatypen, der bruges til at gemme tekst i C#."
+      },
+      {
+        "question": "Hvordan opretter man en kommentar i C#?",
+        "options": ["// for en linje, /* */ for flere linjer", "// kun for flere linjer", "/* kun for en linje */", "# for kommentarer"],
+        "answer": "// for en linje, /* */ for flere linjer",
+        "explanation": "Kommentarer i C# kan oprettes med // for en enkel linje og /* */ for blokkommentarer over flere linjer."
+      },
+      {
+        "question": "Hvad står C# for i C# sprogets navn?",
+        "options": ["Det har ingen specifik betydning", "Det er en version af C", "Det står for 'Control Sharp'", "Det er en videreudvikling af C++"],
+        "answer": "Det er en videreudvikling af C++",
+        "explanation": "C# blev udviklet som en videreudvikling af C++ for at kombinere enkelhed og kraftfuld funktionalitet."
+      },
+      {
+        "question": "Hvad er en variabel i C#?",
+        "options": ["Et navn for et sted i hukommelsen, hvor data gemmes", "En fast værdi", "En filtype", "En metode"],
+        "answer": "Et navn for et sted i hukommelsen, hvor data gemmes",
+        "explanation": "En variabel er en plads i hukommelsen, som gemmer data, der kan ændres under programmets eksekvering."
+      },
+      {
+        "question": "Hvilken datatype i C# bruges til at gemme sand/falsk værdier?",
+        "options": ["bool", "boolean", "bit", "binary"],
+        "answer": "bool",
+        "explanation": "Datatypen 'bool' bruges til at gemme sand/falsk (true/false) værdier i C#."
+      },
+      {
+        "question": "Hvordan afsluttes en blok af kode i C#?",
+        "options": ["Med tuborgklammer {}", "Med parenteser ()", "Med anførselstegn \"\"", "Med firkantede klammer []"],
+        "answer": "Med tuborgklammer {}",
+        "explanation": "C# bruger tuborgklammer {} til at markere starten og slutningen af en blok af kode."
+      },
+      {
+        "question": "Hvad er forskellen mellem en 'class' og en 'struct' i C#?",
+        "options": ["Classes er reference-typer, structs er værdi-typer", "Classes kan ikke have metoder, structs kan", "Structs bruges kun til tal", "Der er ingen forskel"],
+        "answer": "Classes er reference-typer, structs er værdi-typer",
+        "explanation": "I C# er classes reference-typer, hvilket betyder, at de gemmes på heapen, mens structs er værdi-typer, som gemmes på stacken."
+      },
+      {
+        "question": "Hvordan skriver man 'Hello World' i C#?",
+        "options": [
+          "Console.WriteLine('Hello World');",
+          "print('Hello World');",
+          "System.out.println('Hello World');",
+          "echo 'Hello World';"
+        ],
+        "answer": "Console.WriteLine('Hello World');",
+        "explanation": "'Console.WriteLine' bruges til at udskrive 'Hello World' til konsollen i C#."
+      },
+      {
+        "question": "Hvilken datatype bruges til at gemme decimaltal i C#?",
+        "options": ["double", "int", "float", "decimal"],
+        "answer": "double",
+        "explanation": "Datatypen 'double' bruges til at gemme decimaltal i C#."
+      },
+      {
+        "question": "Hvad bruges 'using' nøgleordet til i C#?",
+        "options": [
+          "For at inkludere namespaces",
+          "For at definere en variabel",
+          "For at afslutte et program",
+          "For at oprette en klasse"
+        ],
+        "answer": "For at inkludere namespaces",
+        "explanation": "'using' bruges i starten af et C# program for at inkludere namespaces, så man kan bruge deres typer og funktioner."
+      }
+    ]
+  }
+]

@@ -12,8 +12,8 @@ export default function ModulerPage() {
   const router = useRouter();
 
   const modules = [
-    { title: 'App. udvikling', path: '/' },
-    { title: 'Database Design', path: '/' },
+    { title: 'App. udvikling', path: '/moduler/App. udvikling' },
+    { title: 'Database Design', path: '/moduler/Database Design' },
   ];
 
   return(

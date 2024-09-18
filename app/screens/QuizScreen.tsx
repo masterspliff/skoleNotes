@@ -12,6 +12,15 @@ const QuizScreen = () => {
   const [isQuizFinished, setIsQuizFinished] = useState<boolean>(false);
   const [finalScore, setFinalScore] = useState<number>(0);
 
+  const handleBack = () => {
+    if (router.canGoBack()) {
+      router.back(); // Gå tilbage, hvis der er en tidligere skærm
+    } else {
+      router.replace('/moduler'); // Fallback: Naviger til en standard rute (f.eks. forsiden)
+    }
+  };
+
+
   if (!quizData) {
     return (
       <View style={styles.container}>
@@ -39,9 +48,7 @@ const QuizScreen = () => {
           </Text>
           <Button
             mode="contained"
-            onPress={() => {
-              router.replace('/moduler'); 
-            }}
+            onPress={handleBack}
             style={styles.homeButton}
           >
             Go back

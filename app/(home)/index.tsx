@@ -26,7 +26,7 @@ export default function HomeScreen() {
       
         <ThemedText type="subtitle">Gå til moduler hvis du vil se undervisningen</ThemedText>
         <ThemedText>
-          When you're ready, <Link href="/moduler" style={styles.linkColor}>run</Link>
+          When you're ready, <Link push href="/moduler" style={styles.linkColor}>run</Link>
 
         </ThemedText>
 

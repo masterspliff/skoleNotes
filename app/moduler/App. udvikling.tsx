@@ -25,7 +25,7 @@ export default function AppUdviklingScreen() {
 
       <Collapsible title="Introduktion">
         <Introduktion />
-        <Link
+        <Link push
           href={{
             pathname: '/screens/QuizScreen',
             params: { topic: 'Introduktion' },
@@ -34,6 +34,41 @@ export default function AppUdviklingScreen() {
           <Button title="Take Quiz" />
         </Link>
       </Collapsible>
+
+      <Collapsible title="Kontrolstrukturer">
+        <Link
+          href={{
+            pathname: '/screens/QuizScreen',
+            params: { topic: 'Kontrolstrukturer' },
+          }}
+        >
+          <Button title="Quiz" />
+        </Link>
+      </Collapsible>
+
+      <Collapsible title="Arrays og Metoder">
+        <Link
+          href={{
+            pathname: '/screens/QuizScreen',
+            params: { topic: 'Arrays og Metoder' },
+          }}
+        >
+          <Button title="Quiz" />
+        </Link>
+      </Collapsible>
+
+      <Collapsible title="Intro til OOP I ">
+        <Link
+          href={{
+            pathname: '/screens/QuizScreen',
+            params: { topic: 'Intro til OOP I' },
+          }}
+        >
+          <Button title="Quiz" />
+        </Link>
+      </Collapsible>
+
+      
     </ParallaxScrollView>
   );
 }
